@@ -45,23 +45,25 @@
     
 </head>
 <body>
-    <div class="container-fluid" >
-        <div class="card text-center" style="width: 50%; ">
-            <div class="card-body">
-                <div>
-                    Username:
-                    <input type="text" id="inputUsername" placeholder="Username">
-                </div>
-            
-                <div>
-                    Password:
-                    <input type="password" id="inputPassword" placeholder="Password">
-                </div>
-                <div>
-                    <button id="button" onclick="logic()"> login </button>
-                </div>
-                <div class="card-footer">
-                    <button>forget Password?</button>
+    <div class="container-fluid">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="card text-center" style="width: 500px; ">
+                <div class="card-body">
+                    <div>
+                        Username:
+                        <input type="text" id="inputUsername" placeholder="Username">
+                    </div>
+                
+                    <div>
+                        Password:
+                        <input type="password" id="inputPassword" placeholder="Password">
+                    </div>
+                    <div>
+                        <button id="button" onclick="logic()"> login </button>
+                    </div>
+                    <div class="card-footer">
+                        <button>forget Password?</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,20 +77,20 @@
             let passwordTxt = document.getElementById('inputPassword').value;
 
             if (!usernameTxt){
-                alert('ERROR');
+                alert('Enter Username');
                 return
             }
             else if (usernameTxt.length < 3){
-                alert('error');
+                alert('username length is in insufficient');
                 return;
             }
             
             if(!passwordTxt){
-                alert('error');
+                alert('Enter Password');
                 return;
             }
             else if (passwordTxt.length < 3){
-                alert('error');
+                alert('Password length is in insufficient');
                 return
             }
 
